@@ -1,5 +1,6 @@
 import 'package:alcool_app/model/drink.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class NewDrinkModal extends StatefulWidget {
   final Function previewNewDrink;
@@ -145,9 +146,7 @@ class _NewDrinkModalState extends State<NewDrinkModal> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    _selectedTime.hour.toString() +
-                        ':' +
-                        _selectedTime.minute.toString(),
+                    DateFormat.Hm().format(_selectedTime),
                     style: TextStyle(
                       fontSize: 18,
                     ),

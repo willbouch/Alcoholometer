@@ -89,6 +89,7 @@ class UsersPage extends StatelessWidget {
           ),
         ],
       ),
+      resizeToAvoidBottomInset: false,
     );
   }
 }

@@ -97,7 +97,7 @@ class Helper {
     int minutes = (bacLeft / (BAC_REDUCTION / 60.0)).round();
     var now = new DateTime.now();
     now = now.add(new Duration(hours: hours, minutes: minutes));
-    return 'Will be sober around ' + now.hour.toString() + ':' + now.minute.toStringAsFixed(2);
+    return 'Will be sober around ' + DateFormat.Hm().format(now);
   }
 
   static String formatTimeOfDay(TimeOfDay tod) {
